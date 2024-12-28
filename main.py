@@ -1,9 +1,9 @@
 import json
 import random
-
-import requests
-from bs4 import BeautifulSoup
 import time
+import requests
+
+from bs4 import BeautifulSoup
 
 # File to store communicated houses
 COMMUNICATED_HOUSES_FILE = "communicated_houses.json"
