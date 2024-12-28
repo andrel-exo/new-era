@@ -358,5 +358,29 @@
         "floor": "2\u00ba andar com elevador",
         "description": "Apartamento T3 para venda no centro da Cidade da Maia, duas frentes uma virada a Sul para o Jardim do Chantre e outra a Nascente para a Av. Ant\u00f3nio Santos Leite.\nVaranda, 1 lugar de garagem e arrumos, cozinha equipada, ch\u00e3o em madeira na zona privativa, pr\u00e9dio com elevador, excelente localiza\u00e7\u00e3o, ideal para quem procur",
         "garage": "Garagem inclu\u00edda"
+    },
+    "33823923": {
+        "id": "33823923",
+        "title": "Apartamento T3 na rua Doutor Ant\u00f3nio de Sousa Oliveira, s/n, \u00c1guas Santas, Maia",
+        "price": "235.000\u20ac",
+        "location": "Apartamento T3 na rua Doutor Ant\u00f3nio de Sousa Oliveira, s/n, \u00c1guas Santas, Maia",
+        "link": "https://www.idealista.pt/imovel/33823923/",
+        "typology": "T3",
+        "area": "159 m\u00b2 \u00e1rea bruta",
+        "floor": null,
+        "description": "\u2728 Apartamento T3 na Maia - 130m\u00b2\u2728\u00a0\nEste incr\u00edvel apartamento, localizado em zona tranquila da Maia, distrito do Porto, \u00e9 perfeito para quem busca conforto e praticidade! \ufffd\u00a0\n\ufffd Caracter\u00edsticas: \u00a0\u00a0\n\u00c1rea total: 130m\u00b2\u00a0\n3 quartos espa\u00e7osos ( 1 su\u00edte), todos com \u00e1rmario embutidos\u00a0\nSala comum com lareira, proporcionando um a",
+        "garage": null
+    },
+    "33832296": {
+        "id": "33832296",
+        "title": "Apartamento T2 na rua Adelino Amaro da Costa, s/n, Vermoim - Altos, Cidade da Maia",
+        "price": "270.000\u20ac",
+        "location": "Apartamento T2 na rua Adelino Amaro da Costa, s/n, Vermoim - Altos, Cidade da Maia",
+        "link": "https://www.idealista.pt/imovel/33832296/",
+        "typology": "T2",
+        "area": "112 m\u00b2 \u00e1rea bruta",
+        "floor": false,
+        "description": "Apartamento T2 na Rua Adelino Amaro da Costa - Maia\nEste encantador Apartamento oferece uma localiza\u00e7\u00e3o privilegiada em local seguro e tranquilo.\nEste im\u00f3vel est\u00e1 distribu\u00eddo da seguinte forma:\nQuartos: 2\nWcs: 2\nSala de estar e jantar espa\u00e7osa\nCozinha\nPiscina interior e exterior\nGin\u00e1sio/ Court de t\u00e9nis/ Sal\u00e3o de jog",
+        "garage": false
     }
 }

@@ -69,13 +69,13 @@ def fetch_new_listings():
             location = listing.select_one(".item-link")["title"]
             link = f"https://www.idealista.pt{listing.select_one('.item-link')['href']}"
             details = [d.get_text(strip=True) for d in listing.select(".item-detail")]
-            typology = details[0] if len(details) > 0 else None
-            area = details[1] if len(details) > 1 else None
-            floor = details[2] if len(details) > 2 else None
+            typology = details[0] if len(details) > 0 else False
+            area = details[1] if len(details) > 1 else False
+            floor = details[2] if len(details) > 2 else False
             description = listing.select_one(".item-description p").get_text(strip=True) if listing.select_one(
-                ".item-description p") else None
+                ".item-description p") else False
             garage = listing.select_one(".item-parking").get_text(strip=True) if listing.select_one(
-                ".item-parking") else None
+                ".item-parking") else False
 
             new_houses.append({
                 "id": house_id,
@@ -116,7 +116,7 @@ def main():
         new_houses = detect_new_houses(new_listings, communicated_houses)
 
         if new_houses:
-            print("New houses detected:")
+            print("New houses detected!")
             for house in new_houses:
                 message = (
                     f"*Title:* {house['title']}\n"
@@ -133,13 +133,11 @@ def main():
 
                 # Add to communicated houses
                 communicated_houses[house["id"]] = house
-        else:
-            print("No new houses detected.")
 
         # Save updated communicated houses
         save_communicated_houses(communicated_houses)
 
-        # Wait for 5 minutes before checking again
+        # Wait for 15 minutes before checking again
         time.sleep(900)
 
 
