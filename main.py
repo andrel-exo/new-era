@@ -69,13 +69,13 @@ def fetch_new_listings():
             location = listing.select_one(".item-link")["title"]
             link = f"https://www.idealista.pt{listing.select_one('.item-link')['href']}"
             details = [d.get_text(strip=True) for d in listing.select(".item-detail")]
-            typology = details[0] if len(details) > 0 else False
-            area = details[1] if len(details) > 1 else False
-            floor = details[2] if len(details) > 2 else False
+            typology = details[0] if len(details) > 0 else None
+            area = details[1] if len(details) > 1 else None
+            floor = details[2] if len(details) > 2 else None
             description = listing.select_one(".item-description p").get_text(strip=True) if listing.select_one(
-                ".item-description p") else False
+                ".item-description p") else None
             garage = listing.select_one(".item-parking").get_text(strip=True) if listing.select_one(
-                ".item-parking") else False
+                ".item-parking") else None
 
             new_houses.append({
                 "id": house_id,
