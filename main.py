@@ -1,4 +1,6 @@
 import json
+import random
+
 import requests
 from bs4 import BeautifulSoup
 import time
@@ -138,7 +140,7 @@ def main():
         save_communicated_houses(communicated_houses)
 
         # Wait for 15 minutes before checking again
-        time.sleep(900)
+        time.sleep(random.randint(900, 1500))
 
 
 if __name__ == "__main__":
