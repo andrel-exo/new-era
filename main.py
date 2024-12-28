@@ -45,7 +45,7 @@ def save_communicated_houses(houses):
 
 def fetch_new_listings():
     """Fetch the newest listings from the website."""
-    url = "https://www.idealista.pt/comprar-casas/maia/com-preco-max_280000,preco-min_180000,t2,t3"
+    url = "https://www.idealista.pt/comprar-casas/maia/com-preco-max_280000,preco-min_180000,t2,t3/?ordem=atualizado-desc"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36",
         "Accept-Language": "en-US,en;q=0.9",
