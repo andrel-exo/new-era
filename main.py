@@ -2,15 +2,15 @@ import json
 import random
 import time
 import requests
-
 from bs4 import BeautifulSoup
 
-# File to store communicated houses
-COMMUNICATED_HOUSES_FILE = "communicated_houses.json"
+# Load configuration from config.json
+with open("config.json") as f:
+    config = json.load(f)
 
-# Telegram bot credentials
-BOT_TOKEN = "6286089541:AAFXN0DJsBEI_a5RnoyQxct6m8hfv5CjrBg"
-BOT_CHAT_ID = "-4718672043"
+BOT_TOKEN = config["bot_token"]
+BOT_CHAT_ID = config["bot_chat_id"]
+COMMUNICATED_HOUSES_FILE = config.get("communicated_houses_file", "communicated_houses.json")
 
 
 def send_message(bot_token, bot_chat_id, bot_message):
