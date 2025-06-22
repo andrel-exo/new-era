@@ -8,9 +8,15 @@ from bs4 import BeautifulSoup
 with open("config.json") as f:
     config = json.load(f)
 
+required_keys = ["bot_token", "bot_chat_id", "listing_url"]
+missing_keys = [k for k in required_keys if not config.get(k)]
+if missing_keys:
+    raise ValueError(f"Missing keys in config.json: {', '.join(missing_keys)}")
+
 BOT_TOKEN = config["bot_token"]
 BOT_CHAT_ID = config["bot_chat_id"]
 COMMUNICATED_HOUSES_FILE = config.get("communicated_houses_file", "communicated_houses.json")
+LISTING_URL = config["listing_url"]
 
 
 def send_message(bot_token, bot_chat_id, bot_message):
@@ -45,7 +51,7 @@ def save_communicated_houses(houses):
 
 def fetch_new_listings():
     """Fetch the newest listings from the website."""
-    url = "https://www.idealista.pt/comprar-casas/maia/com-preco-max_280000,preco-min_160000,t2,t3/?ordem=atualizado-desc"
+    url = LISTING_URL
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36",
         "Accept-Language": "en-US,en;q=0.9",
