@@ -1,6 +1,6 @@
 {
-  "bot_token": "",
-  "bot_chat_id": "",
+  "bot_token": "YOUR_TELEGRAM_BOT_TOKEN",
+  "bot_chat_id": "YOUR_CHAT_ID",
   "communicated_houses_file": "communicated_houses.json",
   "listing_url": "https://www.idealista.pt/comprar-casas/maia/com-preco-max_280000,preco-min_160000,t2,t3/?ordem=atualizado-desc"
 }
